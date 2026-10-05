@@ -1,0 +1,10 @@
+{
+  "name": "atlas-root",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "vercel-build": "node scripts/build-landing.js",
+    "build": "node scripts/build-landing.js"
+  }
+}
