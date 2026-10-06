@@ -1,4 +1,0 @@
-interface:
-  display_name: "Saudi Arabic Interface"
-  short_description: "Saudi RTL, Riyal, bidi, and locale rules"
-  default_prompt: "Use $saudi-arabic-interface to build and verify a Saudi Arabic-first bilingual interface."

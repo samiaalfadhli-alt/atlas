@@ -1,8 +1,0 @@
-{
-  "ignorePatterns": [
-    "public/**",
-    ".next/**",
-    "node_modules/**",
-    ".agents/**"
-  ]
-}
