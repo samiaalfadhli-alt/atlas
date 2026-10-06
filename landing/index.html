@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>WhatsApp Hub</title>
+<style>
+  :root { --bg:#0b141a; --panel:#111b21; --border:#2a3942; --text:#e9edef; --muted:#8696a0; --green:#00a884; }
+  * { box-sizing:border-box }
+  body { margin:0; min-height:100vh; display:grid; place-items:center; background:var(--bg); color:var(--text); font-family:system-ui,-apple-system,"Segoe UI",sans-serif; padding:16px }
+  .card { background:var(--panel); border:1px solid var(--border); border-radius:16px; padding:32px; max-width:640px; width:100% }
+  h1 { margin:0 0 8px; display:flex; align-items:center; gap:10px }
+  .dot { width:12px; height:12px; border-radius:50%; background:var(--green); display:inline-block }
+  p, li { color:var(--muted); line-height:1.7 }
+  code { background:#202c33; padding:2px 8px; border-radius:6px; direction:ltr; display:inline-block; color:var(--text) }
+  pre { background:#202c33; padding:14px; border-radius:10px; direction:ltr; text-align:left; overflow:auto; color:var(--text) }
+  h2 { font-size:16px; margin:24px 0 8px }
+  .note { border-inline-start:3px solid var(--green); padding:8px 14px; background:#162129; border-radius:8px; margin-top:16px }
+</style>
+</head>
+<body>
+<div class="card">
+  <h1><span class="dot"></span> WhatsApp Hub</h1>
+  <p>لوحة واحدة لإدارة جميع أرقام ومنصات واتساب: صندوق وارد موحّد، ربط QR وCloud API، وسائط، ردود جاهزة وتلقائية.</p>
+
+  <div class="note">
+    <p style="margin:0;color:var(--text)">هذه صفحة تعريفية فقط. التطبيق يحتاج خادم Node.js دائم (اتصال مستمر بواتساب + تخزين الجلسات) ولا يعمل على Vercel Serverless.</p>
+  </div>
+
+  <h2>التشغيل على خادمك (VPS / Railway / Render)</h2>
+  <pre>cd whatsapp-hub
+cp .env.example .env   # ضع ADMIN_PASSWORD
+npm install
+npm start              # http://localhost:3000</pre>
+
+  <h2>التشغيل الدائم</h2>
+  <pre>npm i -g pm2
+pm2 start src/server.js --name whatsapp-hub</pre>
+
+  <p>الكود الكامل في مجلد <code>whatsapp-hub/</code> داخل المستودع.</p>
+</div>
+</body>
+</html>
